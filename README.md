@@ -6,5 +6,5 @@
 - 微博发布、删除和修改
 - 评论发表、删除和修改
 
-![图片]()
+![图片](https://github.com/Benbestlife/weibo_socket/blob/master/weibo.gif)
 
