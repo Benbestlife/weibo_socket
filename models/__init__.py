@@ -3,7 +3,7 @@ import time
 
 from models.user_role import (
     Encoder,
-    gua_decode,
+    weibo_decode,
 )
 
 from utils import log
@@ -18,7 +18,7 @@ def save(data, path):
     # json 是一个序列化/反序列化 list/dict 的库
     # indent 是缩进
     # ensure_ascii=False 用于保存中文
-    s = json.dumps(data, indent=2, ensure_ascii=False, cls=GuaEncoder)
+    s = json.dumps(data, indent=2, ensure_ascii=False, cls=Encoder)
     with open(path, 'w+', encoding='utf-8') as f:
         log('save', path, s, data)
         f.write(s)
@@ -32,7 +32,7 @@ def load(path):
     with open(path, 'r', encoding='utf-8') as f:
         s = f.read()
         log('load', s)
-        return json.loads(s, object_hook=gua_decode)
+        return json.loads(s, object_hook=weibo_decode)
 
 
 class Model(object):

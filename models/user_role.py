@@ -20,7 +20,7 @@ class Encoder(json.JSONEncoder):
             return super().default(o)
 
 
-def gua_decode(d):
+def weibo_decode(d):
     if Encoder.prefix in d:
         name = d[Encoder.prefix]
         return UserRole[name]

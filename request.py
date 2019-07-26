@@ -54,7 +54,7 @@ class Request(object):
         """
         输入: /xxx?message=hello&author=xxx
         返回
-        (gua, {
+        (xxx, {
             'message': 'hello',
             'author': 'xxx',
         })
